@@ -7,8 +7,5 @@ try:
     print(my_list[8])
     print(my_dict['age'])
     print(num+char)
-except IndexError:
-    raise IndexError from None
+except (IndexError, KeyError, TypeError) as e:
     print(e)
-except KeyError:
-    print(KeyError)
